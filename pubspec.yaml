@@ -35,6 +35,9 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
   
   loop_page_view: ^1.0.11
+  go_router: ^6.2.0
+  url_launcher: ^6.0.0
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -72,9 +75,62 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/banner/logo2.png
+    - assets/banner/logo.png
+    - assets/banner/contact.png
+
+    - assets/header/service.png
+    - assets/header/head.png
+    - assets/header/banner2.png
+
+    - assets/services/check.png
+
+    - assets/work/w1.jpg
+    - assets/work/w2.png
+    - assets/work/w3.png
+    - assets/work/w4.png
+    - assets/work/w5.png
+    - assets/work/w6.png
+    - assets/work/w7.png
+    - assets/work/w8.png
+    - assets/work/w9.png
+    - assets/work/w10.png
+
+    - assets/team/1.jpg
+    - assets/team/2.jpg
+    - assets/team/3.jpg
+    - assets/team/4.jpg
+    - assets/team/5.jpg
+    - assets/team/6.jpg
+    - assets/team/7.jpg
+    - assets/team/8.jpg
+    - assets/team/9.jpg
+    - assets/team/10.jpg
+    - assets/team/11.jpg
+    - assets/team/12.jpg
+
+    - assets/member/B.png
+    - assets/member/bas.png
+    - assets/member/beam.png
+    - assets/member/beer.png
+    - assets/member/fon.png
+    - assets/member/gam.png
+    - assets/member/jimmy.png
+    - assets/member/kay.png
+    - assets/member/kong.png
+    - assets/member/kookkai.png
+    - assets/member/kwan-pa.png
+    - assets/member/kwan.png
+    - assets/member/max.png
+    - assets/member/mo.png
+    - assets/member/oil.png
+    - assets/member/pan.png
+    - assets/member/praew-pintusorn.png
+    - assets/member/praew-rapeeporn.png
+    - assets/member/tan.png
+    - assets/member/tonhom.png
+    - assets/member/yoyo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

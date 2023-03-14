@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:pmat/responsive.dart';
 import 'package:pmat/navbar.dart';
 import 'package:pmat/menu_drawer.dart';
+
 // import 'package:google_fonts/google_fonts.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
+
+import 'package:pmat/home/banner.dart';
+import 'package:pmat/home/services.dart';
+import 'package:pmat/footer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -33,10 +38,10 @@ class _HomePageState extends State<HomePage> {
               ? Padding(
                   padding: const EdgeInsets.all(20),
                   child: SizedBox(
-                    height: 60,
+                    height: 50,
                     width: 100,
                     child: Image.asset(
-                      '/banner/logo2.png',
+                      'assets/banner/logo.png',
                     ),
                   ),
                 )
@@ -45,15 +50,7 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // StoryPage(),
-            // Pdpa(),
-            // FeaturesPage(),
-            // Customer(),
-            // PackagesPage(),
-            // FAQ(),
-            // Footer()
-          ],
+          children: [BannerPage(), Services(),Footer()],
         ),
       ),
     );
