@@ -7,7 +7,6 @@ import 'package:pmat/menu_drawer.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
 
 import 'package:pmat/footer.dart';
-import 'package:pmat/about/aboutpage.dart';
 
 class AboutPage extends StatefulWidget {
   @override
@@ -15,13 +14,13 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
-  int _currentIndex = 0;
+  // int _currentIndex = 0;
 
-  void onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
+  // void onTabTapped(int index) {
+  //   setState(() {
+  //     _currentIndex = index;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {

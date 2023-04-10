@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pmat/responsive.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:go_router/go_router.dart';
+// import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -108,7 +108,7 @@ class _FooterState extends State<Footer> {
                                   Padding(
                                     padding: const EdgeInsets.only(left: 20),
                                     child: GestureDetector(
-                                      onTap: () => launch(facebookUrl),
+                                      onTap: () => launch("https://www.facebook.com/pmatacc"),
                                       child: Text(
                                         "www.facebook.com/pmatacc",
                                         style: GoogleFonts.sarabun(

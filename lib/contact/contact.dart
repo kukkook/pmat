@@ -5,18 +5,15 @@ import 'package:pmat/menu_drawer.dart';
 
 // import 'package:google_fonts/google_fonts.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
-
-import 'package:pmat/home/banner.dart';
-import 'package:pmat/home/services.dart';
 import 'package:pmat/footer.dart';
+import 'package:pmat/contact/detail.dart';
 
-
-class HomePage extends StatefulWidget {
+class ContactPage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _ContactPageState createState() => _ContactPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _ContactPageState extends State<ContactPage> {
   // int _currentIndex = 0;
 
   // void onTabTapped(int index) {
@@ -51,7 +48,9 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [BannerPage(), Services(),Footer()],
+          children: [
+          DetailContact(),
+          Footer()],
         ),
       ),
     );

@@ -3,18 +3,11 @@ import 'package:go_router/go_router.dart';
 
 import 'package:pmat/homepage.dart';
 import 'package:pmat/about/aboutpage.dart';
-// import 'package:wiseintern/customers/customerspage.dart';
-// import 'package:wiseintern/services/servicespage.dart';
-// import 'package:wiseintern/products/productspage.dart';
-// import 'package:wiseintern/features/pdmanagement.dart';
-// import 'package:wiseintern/contact/contactpage.dart';
-// import 'package:wiseintern/faq/faqpage.dart';
-// import 'package:wiseintern/demo/demopage.dart';
-// import 'package:wiseintern/producttable/producttablepage.dart';
-// import 'package:wiseintern/home/features.dart';
-// import 'package:wiseintern/home/packagepage.dart';
-// import 'navbar.dart';
-// import 'package:wiseintern/home/customers.dart';
+import 'package:pmat/work/workpage.dart';
+import 'package:pmat/work/work1.dart';
+import 'package:pmat/work/work2.dart';
+import 'package:pmat/work/work3.dart';
+import 'package:pmat/contact/contact.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +25,36 @@ final GoRouter _router = GoRouter(
           path: 'about',
           builder: (BuildContext context, GoRouterState state) {
             return AboutPage();
+          },
+        ),
+        GoRoute(
+          path: 'services',
+          builder: (BuildContext context, GoRouterState state) {
+            return WorkPage();
+          },
+        ),
+        GoRoute(
+          path: 'services/seal',
+          builder: (BuildContext context, GoRouterState state) {
+            return First();
+          },
+        ),
+        GoRoute(
+          path: 'services/visa&workpermit',
+          builder: (BuildContext context, GoRouterState state) {
+            return Second();
+          },
+        ),
+        GoRoute(
+          path: 'services/register',
+          builder: (BuildContext context, GoRouterState state) {
+            return Third();
+          },
+        ),
+        GoRoute(
+          path: 'contact',
+          builder: (BuildContext context, GoRouterState state) {
+            return ContactPage();
           },
         ),
       ],

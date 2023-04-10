@@ -109,9 +109,9 @@ class _ServicesState extends State<Services> {
   int? hoveredIndex;
 
   List<FeatureModel> features = [
-    FeatureModel("ตราประทับบริษัท", "work/w1.jpg", ""),
-    FeatureModel("งานขอ VISA&WORK PERMIT", "work/w2.png", ""),
-    FeatureModel("บริการจดทะเบียนเปลี่ยนแปลงแก้ไขอื่นๆ", "work/w3.png", ""),
+    FeatureModel("ตราประทับบริษัท", "work/w1.jpg", "services/seal"),
+    FeatureModel("งานขอ VISA&WORK PERMIT", "work/w2.png", "services/visa&workpermit"),
+    FeatureModel("บริการจดทะเบียนเปลี่ยนแปลงแก้ไขอื่นๆ", "work/w3.png", "services/register"),
     FeatureModel("จดทะเบียนห้างหุ้นส่วน", "work/w4.png", ""),
     FeatureModel("จดทะเบียนจัดตั้งบริษัท", "work/w5.png", ""),
     FeatureModel("บริการวางระบบบัญชี", "work/w6.png", ""),
@@ -223,6 +223,17 @@ class _ServicesState extends State<Services> {
                 ),
                 textAlign: TextAlign.center,
               ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(top: 30,),
+              child: SizedBox(
+                width: Responsive.isDesktop(context)
+                      ? 1200
+                      : Responsive.isTablet(context)
+                          ? 700
+                          : 320,
+                child: Image.asset("assets/banner/ads1.jpg",fit: BoxFit.fitWidth,)),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 50, bottom: 50),
@@ -355,6 +366,28 @@ class _ServicesState extends State<Services> {
                       );
                     }),
               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 50),
+              child: Wrap(children: [
+                SizedBox(
+                  width: Responsive.isDesktop(context)
+                        ? 700
+                        : Responsive.isTablet(context)
+                            ? 320
+                            : 150,
+                  child: Image.asset("assets/banner/ads2.jpg",fit: BoxFit.fitWidth,)),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30),
+                  child: SizedBox(
+                    width: Responsive.isDesktop(context)
+                          ? 700
+                          : Responsive.isTablet(context)
+                              ? 320
+                              : 150,
+                    child: Image.asset("assets/banner/ads3.jpg",fit: BoxFit.fitWidth,)),
+                ),
+              ],),
             ),
             Container(
               width: Responsive.isDesktop(context)

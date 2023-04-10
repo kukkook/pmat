@@ -37,6 +37,7 @@ dependencies:
   loop_page_view: ^1.0.11
   go_router: ^6.2.0
   url_launcher: ^6.0.0
+  
 
 
 
@@ -79,6 +80,9 @@ flutter:
     - assets/banner/logo2.png
     - assets/banner/logo.png
     - assets/banner/contact.png
+    - assets/banner/ads1.jpg
+    - assets/banner/ads2.jpg
+    - assets/banner/ads3.jpg
 
     - assets/header/service.png
     - assets/header/head.png
@@ -96,6 +100,12 @@ flutter:
     - assets/work/w8.png
     - assets/work/w9.png
     - assets/work/w10.png
+
+    - assets/detail/work1.jpg
+    - assets/detail/work4-1.jpg
+    - assets/detail/work4-1.jpg
+    - assets/detail/work4.jpg
+    - assets/detail/work5.jpg
 
     - assets/team/1.jpg
     - assets/team/2.jpg
@@ -131,6 +141,9 @@ flutter:
     - assets/member/tan.png
     - assets/member/tonhom.png
     - assets/member/yoyo.png
+
+    - assets/contact/line-pmat.jpg
+    - assets/contact/line-chonburi.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
