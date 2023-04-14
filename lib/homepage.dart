@@ -51,7 +51,10 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [BannerPage(), Services(),Footer()],
+          children: [
+            BannerPage(),
+           Services(),
+           Footer()],
         ),
       ),
     );

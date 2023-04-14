@@ -45,6 +45,11 @@ class _SecondState extends State<Second> {
           children: [
             Center(
               child: Container(
+                width: Responsive.isDesktop(context)
+                                ? 1440
+                                : Responsive.isTablet(context)
+                                    ? 768
+                                    : 375,
                 // width: 1440,
                 color: Colors.transparent,
                 child: Column(
@@ -156,22 +161,26 @@ class _SecondState extends State<Second> {
                             ? 40
                             : Responsive.isTablet(context)
                                 ? 35
-                                : 30,
+                                : 50,
                         decoration: BoxDecoration(
                             color: Color.fromARGB(255, 13, 26, 121),
                             borderRadius: BorderRadius.circular(10)),
-                        child: Text(
-                          "เอกสารสำหรับยื่นคำขอรับใบอนุญาตทำงาน (Work permit)",
-                          style: GoogleFonts.sarabun(
-                            fontSize: Responsive.isDesktop(context)
-                                ? 25
-                                : Responsive.isTablet(context)
-                                    ? 20
-                                    : 18,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 5),
+                          child: Text(
+                            Responsive.isDesktop(context)?"เอกสารสำหรับยื่นคำขอรับใบอนุญาตทำงาน (Work permit)":Responsive.isTablet(context)?"เอกสารสำหรับยื่นคำขอรับใบอนุญาตทำงาน (Work permit)"
+                            :"เอกสารสำหรับยื่นคำขอ\nรับใบอนุญาตทำงาน (Work permit)",
+                            style: GoogleFonts.sarabun(
+                              fontSize: Responsive.isDesktop(context)
+                                  ? 25
+                                  : Responsive.isTablet(context)
+                                      ? 20
+                                      : 15,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white,
+                            ),
+                            textAlign: TextAlign.center,
                           ),
-                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
@@ -430,24 +439,27 @@ class _SecondState extends State<Second> {
                         ],
                       ),
                     ),
-                    Container(
-                      width: 200,
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(
-                              color: Color.fromARGB(255, 13, 26, 121),
-                              width: 2)),
-                      child: TextButton(
-                          onPressed: () => context.go('/services'),
-                          child: Text(
-                            "งานบริการอื่นๆ",
-                            style: GoogleFonts.sarabun(
-                              fontSize: 18,
-                              color: Color.fromARGB(255, 13, 26, 121),
-                            ),
-                          )),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 30),
+                      child: Container(
+                        width: 200,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(
+                                color: Color.fromARGB(255, 13, 26, 121),
+                                width: 2)),
+                        child: TextButton(
+                            onPressed: () => context.go('/services'),
+                            child: Text(
+                              "งานบริการอื่นๆ",
+                              style: GoogleFonts.sarabun(
+                                fontSize: 18,
+                                color: Color.fromARGB(255, 13, 26, 121),
+                              ),
+                            )),
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 80),

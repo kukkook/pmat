@@ -43,6 +43,11 @@ class _ThirdState extends State<Third> {
           children: [
             Center(
               child: Container(
+                width: Responsive.isDesktop(context)
+                                ? 1440
+                                : Responsive.isTablet(context)
+                                    ? 768
+                                    : 375,
                 // width: 1440,
                 color: Colors.transparent,
                 child: Column(

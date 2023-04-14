@@ -29,13 +29,12 @@ class _BannerState extends State<BannerPage> {
                 color: Colors.white,
                 child: Stack(
                   children: [
-                    Responsive.isDesktop(context)
-                        ? Container(
+                    Container(
                             child: CarouselSlider(
                                 carouselController: _controller,
                                 options: CarouselOptions(
-                                  viewportFraction: 0.67,
-                                  height: 500,
+                                  viewportFraction: 1.35,
+                                  height: Responsive.isDesktop(context)?500:Responsive.isTablet(context)?300:180,
                                   autoPlay: true,
                                   onPageChanged: (index, reason) {
                                     setState(() {
@@ -70,88 +69,7 @@ class _BannerState extends State<BannerPage> {
                                   ),
                                 ]),
                           )
-                        : Responsive.isTablet(context)
-                            ? Container(
-                                child: CarouselSlider(
-                                    carouselController: _controller,
-                                    options: CarouselOptions(
-                                      viewportFraction: 0.67,
-                                      height: 200,
-                                      autoPlay: true,
-                                      onPageChanged: (index, reason) {
-                                        setState(() {
-                                          _current = index;
-                                        });
-                                      },
-                                    ),
-                                    items: [
-                                      Container(
-                                        width: 768,
-                                        // color: Colors.amber,
-                                        child: Image.asset(
-                                          "assets/header/banner2.png",
-                                          fit: BoxFit.fitHeight,
-                                        ),
-                                      ),
-                                      Container(
-                                        width: 768,
-                                        // color: Colors.amber,
-                                        child: Image.asset(
-                                          "assets/header/service.png",
-                                          fit: BoxFit.fitHeight,
-                                        ),
-                                      ),
-                                      Container(
-                                        width: 768,
-                                        // color: Colors.amber,
-                                        child: Image.asset(
-                                          "assets/header/head.png",
-                                          fit: BoxFit.fitHeight,
-                                        ),
-                                      ),
-                                    ]),
-                              )
-                            : Container(
-                                child: CarouselSlider(
-                                    carouselController: _controller,
-                                    options: CarouselOptions(
-                                      viewportFraction: 0.67,
-                                      height: 100,
-                                      autoPlay: true,
-                                      onPageChanged: (index, reason) {
-                                        setState(() {
-                                          _current = index;
-                                        });
-                                      },
-                                    ),
-                                    items: [
-                                      Container(
-                                        width: 375,
-                                        // color: Colors.amber,
-                                        child: Image.asset(
-                                          "assets/header/banner2.png",
-                                          fit: BoxFit.fitHeight,
-                                        ),
-                                      ),
-                                      Container(
-                                        width: 375,
-                                        // color: Colors.amber,
-                                        child: Image.asset(
-                                          "assets/header/service.png",
-                                          fit: BoxFit.fitHeight,
-                                        ),
-                                      ),
-                                      Container(
-                                        width: 375,
-                                        // color: Colors.amber,
-                                        child: Image.asset(
-                                          "assets/header/head.png",
-                                          fit: BoxFit.fitHeight,
-                                        ),
-                                      ),
-                                    ]),
-                              )
-                  ],
+                        ],
                 )),
           )),
     );

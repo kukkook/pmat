@@ -110,15 +110,17 @@ class _ServicesState extends State<Services> {
 
   List<FeatureModel> features = [
     FeatureModel("ตราประทับบริษัท", "work/w1.jpg", "services/seal"),
-    FeatureModel("งานขอ VISA&WORK PERMIT", "work/w2.png", "services/visa&workpermit"),
-    FeatureModel("บริการจดทะเบียนเปลี่ยนแปลงแก้ไขอื่นๆ", "work/w3.png", "services/register"),
-    FeatureModel("จดทะเบียนห้างหุ้นส่วน", "work/w4.png", ""),
-    FeatureModel("จดทะเบียนจัดตั้งบริษัท", "work/w5.png", ""),
-    FeatureModel("บริการวางระบบบัญชี", "work/w6.png", ""),
-    FeatureModel("บริการตรวจสอบบัญชี", "work/w7.png", ""),
-    FeatureModel("บริการปิดงบการเงินประจำปี", "work/w8.png", ""),
-    FeatureModel("บริการรับทำบัญชี ภาษีรายปี", "work/w9.png", ""),
-    FeatureModel("บริการรับทำบัญชี ภาษีรายเดือน", "work/w10.png", ""),
+    FeatureModel(
+        "งานขอ VISA&WORK PERMIT", "work/w2.png", "services/visa&workpermit"),
+    FeatureModel("บริการจดทะเบียนเปลี่ยนแปลงแก้ไขอื่นๆ", "work/w3.png",
+        "services/register"),
+    FeatureModel("จดทะเบียนห้างหุ้นส่วน", "work/w4.png", "services/partnerships"),
+    FeatureModel("จดทะเบียนจัดตั้งบริษัท", "work/w5.png", "services/established"),
+    FeatureModel("บริการวางระบบบัญชี", "work/w6.png", "services/setupacc"),
+    FeatureModel("บริการตรวจสอบบัญชี", "work/w7.png", "services/examine"),
+    FeatureModel("บริการปิดงบการเงินประจำปี", "work/w8.png", "services/statement"),
+    FeatureModel("บริการรับทำบัญชี ภาษีรายปี", "work/w9.png", "services/annualtax"),
+    FeatureModel("บริการรับทำบัญชี ภาษีรายเดือน", "work/w10.png", "services/monthlytax"),
   ];
 
   List<String> img = [
@@ -224,16 +226,20 @@ class _ServicesState extends State<Services> {
                 textAlign: TextAlign.center,
               ),
             ),
-
             Padding(
-              padding: const EdgeInsets.only(top: 30,),
+              padding: const EdgeInsets.only(
+                top: 30,
+              ),
               child: SizedBox(
-                width: Responsive.isDesktop(context)
+                  width: Responsive.isDesktop(context)
                       ? 1200
                       : Responsive.isTablet(context)
                           ? 700
                           : 320,
-                child: Image.asset("assets/banner/ads1.jpg",fit: BoxFit.fitWidth,)),
+                  child: Image.asset(
+                    "assets/banner/ads1.jpg",
+                    fit: BoxFit.fitWidth,
+                  )),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 50, bottom: 50),
@@ -330,29 +336,31 @@ class _ServicesState extends State<Services> {
                                                       255, 13, 26, 121)),
                                           textAlign: TextAlign.center,
                                         ),
-                                        TextButton(
-                                          onPressed: () => context
-                                              .go('/${features[index].page}'),
-                                          child: GridTile(
-                                              child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                "คลิกเพื่อดูรายละเอียด",
-                                                style: GoogleFonts.inter(
-                                                    fontSize: Responsive
-                                                            .isDesktop(context)
-                                                        ? 18
-                                                        : Responsive.isTablet(
-                                                                context)
-                                                            ? 16
-                                                            : 16,
-                                                    color: Color.fromARGB(
-                                                        255, 57, 129, 237)),
-                                              ),
-                                            ],
-                                          )),
+                                        Container(
+                                          width: Responsive.isDesktop(context)
+                                              ? 280
+                                              : Responsive.isTablet(context)
+                                                  ? 230
+                                                  : 180,
+                                          child: TextButton(
+                                            onPressed: () => context
+                                                .go('/${features[index].page}'),
+                                            child: GridTile(
+                                                child: Text(
+                                              "คลิกเพื่อดูรายละเอียด",
+                                              style: GoogleFonts.inter(
+                                                  fontSize:
+                                                      Responsive.isDesktop(
+                                                              context)
+                                                          ? 18
+                                                          : Responsive.isTablet(
+                                                                  context)
+                                                              ? 16
+                                                              : 16,
+                                                  color: Color.fromARGB(
+                                                      255, 57, 129, 237)),
+                                            )),
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -368,27 +376,61 @@ class _ServicesState extends State<Services> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 50),
-              child: Wrap(children: [
-                SizedBox(
-                  width: Responsive.isDesktop(context)
-                        ? 700
-                        : Responsive.isTablet(context)
-                            ? 320
-                            : 150,
-                  child: Image.asset("assets/banner/ads2.jpg",fit: BoxFit.fitWidth,)),
-                Padding(
-                  padding: const EdgeInsets.only(left: 30),
-                  child: SizedBox(
-                    width: Responsive.isDesktop(context)
-                          ? 700
-                          : Responsive.isTablet(context)
-                              ? 320
-                              : 150,
-                    child: Image.asset("assets/banner/ads3.jpg",fit: BoxFit.fitWidth,)),
-                ),
-              ],),
-            ),
+                padding: const EdgeInsets.only(bottom: 50),
+                child: Responsive.isDesktop(context)
+                    ? Wrap(
+                        children: [
+                          SizedBox(
+                              width: Responsive.isDesktop(context)
+                                  ? 700
+                                  : Responsive.isTablet(context)
+                                      ? 320
+                                      : 150,
+                              child: Image.asset(
+                                "assets/banner/ads2.jpg",
+                                fit: BoxFit.fitWidth,
+                              )),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 30),
+                            child: SizedBox(
+                                width: Responsive.isDesktop(context)
+                                    ? 700
+                                    : Responsive.isTablet(context)
+                                        ? 320
+                                        : 150,
+                                child: Image.asset(
+                                  "assets/banner/ads3.jpg",
+                                  fit: BoxFit.fitWidth,
+                                )),
+                          ),
+                        ],
+                      )
+                    : Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                              width: Responsive.isDesktop(context)
+                                  ? 1400
+                                  : Responsive.isTablet(context)
+                                      ? 760
+                                      : 330,
+                              child: Image.asset(
+                                "assets/banner/ads2.jpg",
+                                fit: BoxFit.fitWidth,
+                              )),
+                              SizedBox(height: 30,),
+                          SizedBox(
+                              width: Responsive.isDesktop(context)
+                                  ? 1400
+                                  : Responsive.isTablet(context)
+                                      ? 760
+                                      : 330,
+                              child: Image.asset(
+                                "assets/banner/ads3.jpg",
+                                fit: BoxFit.fitWidth,
+                              ))
+                        ],
+                      )),
             Container(
               width: Responsive.isDesktop(context)
                   ? 1440
